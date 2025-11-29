@@ -32,6 +32,7 @@ export default async function RootLayout(props: Props) {
     <html lang="en" suppressHydrationWarning>
       <body
         className={`${inter.variable} ${outfit.variable} antialiased pb-20`}
+        suppressHydrationWarning
       >
         <ThemeProvider>
           <AppLayout>{children}</AppLayout>
