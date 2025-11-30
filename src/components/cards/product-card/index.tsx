@@ -38,13 +38,13 @@ const ProductCard = (props: Props) => {
       key={product.id}
       className="group flex flex-col border rounded-lg hover:shadow-md hover:border-primary/20 hover:scale-105 transition-all duration-200 bg-card cursor-pointer overflow-hidden"
     >
-      <div className="w-full h-56 bg-secondary overflow-hidden transition-transform duration-200 group-hover:scale-105 flex items-center justify-center">
+      <div className="w-full h-56 overflow-hidden transition-transform duration-200 group-hover:scale-105 flex items-center justify-center">
         <Image
           src={product.logo.url}
           alt={product.logo?.alt || product.title}
           width={400}
-          height={192}
-          className="object-contain w-full h-full"
+          height={224}
+          className="object-cover w-full h-full"
           unoptimized
           priority={product.id === "1"}
         />

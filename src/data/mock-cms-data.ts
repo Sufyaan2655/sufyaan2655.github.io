@@ -427,6 +427,21 @@ export const mockProducts: TCMSProduct[] = [
     createdAt: new Date().toISOString(),
   },
   {
+    id: "4",
+    title: "Parking Ticket Bot",
+    description: "An AI-powered tool that analyzes parking tickets using OCR and vision APIs to extract violation details and verify regulations through NYC Open Data APIs. Includes automated notifications and tracking for appeal outcomes.",
+    logo: {
+      url: "/images/Parking Ticket Bot.png",
+      alt: "Parking Ticket Bot",
+      width: 192,
+      height: 144,
+    },
+    pricingType: CMSProductPricingTypeEnum.OPEN_SOURCE,
+    liveLink: "",
+    sourceLink: "",
+    createdAt: new Date().toISOString(),
+  },
+  {
     id: "3",
     title: "Inventory Management System",
     description: "A comprehensive inventory management solution featuring real-time stock tracking, streamlined operations, and an intuitive user interface.",
@@ -439,21 +454,6 @@ export const mockProducts: TCMSProduct[] = [
     pricingType: CMSProductPricingTypeEnum.FREEMIUM,
     liveLink: "https://inventory-management-lmvi-git-main-sufyaan-mohammeds-projects.vercel.app?_vercel_share=gbgvj8N6sg63T9sUGEyoPYPcVOtwFqE0",
     sourceLink: "https://github.com/Sufyaan2655/Inventory-Management",
-    createdAt: new Date().toISOString(),
-  },
-  {
-    id: "4",
-    title: "anpyher one",
-    description: "Another great product I've built",
-    logo: {
-      url: "https://via.placeholder.com/64",
-      alt: "Another Product",
-      width: 64,
-      height: 64,
-    },
-    pricingType: CMSProductPricingTypeEnum.FREEMIUM,
-    liveLink: "https://example.com/another",
-    sourceLink: "https://github.com/yourusername/another",
     createdAt: new Date().toISOString(),
   },
 ];
@@ -469,27 +469,15 @@ export const mockStacks: TCMSStack[] = [
         title: "React",
         description: "A JavaScript library for building user interfaces",
         logo: {
-          url: "https://cdn.simpleicons.org/react/61DAFB",
+          url: "https://api.iconify.design/simple-icons:react.svg?color=%2361DAFB",
           alt: "React",
           width: 64,
           height: 64,
         },
-        level: CMSStackSkillLevelEnum.ADVANCED,
+        level: null,
       },
       {
         id: "2",
-        title: "Vue.js",
-        description: "The Progressive JavaScript Framework",
-        logo: {
-          url: "https://api.iconify.design/simple-icons:vuedotjs.svg?color=%234FC08D",
-          alt: "Vue.js",
-          width: 64,
-          height: 64,
-        },
-        level: CMSStackSkillLevelEnum.INTERMEDIATE,
-      },
-      {
-        id: "5",
         title: "Next.js",
         description: "The React Framework for Production",
         logo: {
@@ -498,10 +486,22 @@ export const mockStacks: TCMSStack[] = [
           width: 64,
           height: 64,
         },
-        level: CMSStackSkillLevelEnum.ADVANCED,
+        level: null,
       },
       {
-        id: "6",
+        id: "3",
+        title: "TypeScript",
+        description: "Typed JavaScript at any scale",
+        logo: {
+          url: "https://api.iconify.design/simple-icons:typescript.svg?color=%233178C6",
+          alt: "TypeScript",
+          width: 64,
+          height: 64,
+        },
+        level: null,
+      },
+      {
+        id: "4",
         title: "Tailwind CSS",
         description: "A utility-first CSS framework",
         logo: {
@@ -510,7 +510,31 @@ export const mockStacks: TCMSStack[] = [
           width: 64,
           height: 64,
         },
-        level: CMSStackSkillLevelEnum.ADVANCED,
+        level: null,
+      },
+      {
+        id: "5",
+        title: "JavaScript",
+        description: "High-level programming language",
+        logo: {
+          url: "https://api.iconify.design/simple-icons:javascript.svg?color=%23F7DF1E",
+          alt: "JavaScript",
+          width: 64,
+          height: 64,
+        },
+        level: null,
+      },
+      {
+        id: "6",
+        title: "HTML5",
+        description: "Markup language for web pages",
+        logo: {
+          url: "https://api.iconify.design/simple-icons:html5.svg?color=%23E34F26",
+          alt: "HTML5",
+          width: 64,
+          height: 64,
+        },
+        level: null,
       },
     ],
   },
@@ -519,7 +543,7 @@ export const mockStacks: TCMSStack[] = [
     title: "Backend",
     items: [
       {
-        id: "3",
+        id: "7",
         title: "Node.js",
         description: "JavaScript runtime built on Chrome's V8",
         logo: {
@@ -528,10 +552,10 @@ export const mockStacks: TCMSStack[] = [
           width: 64,
           height: 64,
         },
-        level: CMSStackSkillLevelEnum.ADVANCED,
+        level: null,
       },
       {
-        id: "4",
+        id: "8",
         title: "Python",
         description: "A high-level programming language",
         logo: {
@@ -540,10 +564,28 @@ export const mockStacks: TCMSStack[] = [
           width: 64,
           height: 64,
         },
-        level: CMSStackSkillLevelEnum.INTERMEDIATE,
+        level: null,
+      },
+    ],
+  },
+  {
+    id: "3",
+    title: "Database",
+    items: [
+      {
+        id: "9",
+        title: "MySQL",
+        description: "Open-source relational database management system",
+        logo: {
+          url: "https://api.iconify.design/simple-icons:mysql.svg?color=%234479A1",
+          alt: "MySQL",
+          width: 64,
+          height: 64,
+        },
+        level: null,
       },
       {
-        id: "7",
+        id: "10",
         title: "PostgreSQL",
         description: "Advanced open source relational database",
         logo: {
@@ -552,7 +594,133 @@ export const mockStacks: TCMSStack[] = [
           width: 64,
           height: 64,
         },
-        level: CMSStackSkillLevelEnum.INTERMEDIATE,
+        level: null,
+      },
+      {
+        id: "11",
+        title: "MongoDB",
+        description: "NoSQL database program",
+        logo: {
+          url: "https://api.iconify.design/simple-icons:mongodb.svg?color=%2347A248",
+          alt: "MongoDB",
+          width: 64,
+          height: 64,
+        },
+        level: null,
+      },
+      {
+        id: "12",
+        title: "Prisma",
+        description: "Next-generation ORM for Node.js and TypeScript",
+        logo: {
+          url: "https://api.iconify.design/simple-icons:prisma.svg?color=%232D3748",
+          alt: "Prisma",
+          width: 64,
+          height: 64,
+        },
+        level: null,
+      },
+    ],
+  },
+  {
+    id: "4",
+    title: "Tools & Services",
+    items: [
+      {
+        id: "13",
+        title: "Firebase",
+        description: "Google's mobile and web application development platform",
+        logo: {
+          url: "https://api.iconify.design/simple-icons:firebase.svg?color=%23FFCA28",
+          alt: "Firebase",
+          width: 64,
+          height: 64,
+        },
+        level: null,
+      },
+      {
+        id: "14",
+        title: "Vercel",
+        description: "Cloud platform for frontend developers",
+        logo: {
+          url: "https://api.iconify.design/simple-icons:vercel.svg?color=%23000000",
+          alt: "Vercel",
+          width: 64,
+          height: 64,
+        },
+        level: null,
+      },
+      {
+        id: "15",
+        title: "OpenAI API",
+        description: "OpenAI's API for AI and machine learning services",
+        logo: {
+          url: "https://api.iconify.design/simple-icons:openai.svg?color=%23412199",
+          alt: "OpenAI API",
+          width: 64,
+          height: 64,
+        },
+        level: null,
+      },
+      {
+        id: "16",
+        title: "Twilio",
+        description: "Cloud communications platform for SMS, voice, and messaging",
+        logo: {
+          url: "https://api.iconify.design/simple-icons:twilio.svg?color=%23F22F46",
+          alt: "Twilio",
+          width: 64,
+          height: 64,
+        },
+        level: null,
+      },
+      {
+        id: "17",
+        title: "Pillow",
+        description: "Python Imaging Library for image processing and manipulation",
+        logo: {
+          url: "https://api.iconify.design/simple-icons:python.svg?color=%233776AB",
+          alt: "Pillow",
+          width: 64,
+          height: 64,
+        },
+        level: null,
+      },
+      {
+        id: "18",
+        title: "pandas",
+        description: "Data analysis and manipulation library for Python",
+        logo: {
+          url: "https://api.iconify.design/simple-icons:pandas.svg?color=%23150458",
+          alt: "pandas",
+          width: 64,
+          height: 64,
+        },
+        level: null,
+      },
+      {
+        id: "19",
+        title: "Git",
+        description: "Distributed version control system",
+        logo: {
+          url: "https://api.iconify.design/simple-icons:git.svg?color=%23F05032",
+          alt: "Git",
+          width: 64,
+          height: 64,
+        },
+        level: null,
+      },
+      {
+        id: "20",
+        title: "Docker",
+        description: "Containerization platform",
+        logo: {
+          url: "https://api.iconify.design/simple-icons:docker.svg?color=%232496ED",
+          alt: "Docker",
+          width: 64,
+          height: 64,
+        },
+        level: null,
       },
     ],
   },
@@ -563,6 +731,7 @@ export const projectTechStacks: Record<string, string[]> = {
   "1": ["Next.js", "React.js", "TypeScript", "Node.js"], // Smart Transit System
   "2": ["React.js", "Next.js", "Firebase", "MySQL", "Prisma", "Node.js"], // Blogify
   "3": ["React.js", "Next.js", "Firebase", "Node.js", "Vercel"], // Inventory Management System
+  "4": ["Python", "OpenAI API", "Twilio", "MySQL", "OCR APIs"], // Parking Ticket Bot
 };
 
 // Tech stack metadata mapping
@@ -625,6 +794,21 @@ const techStackMetadata: Record<string, { description: string; iconUrl: string; 
   "Vercel": {
     description: "Cloud platform for frontend developers",
     iconUrl: "https://api.iconify.design/simple-icons:vercel.svg?color=%23000000",
+    level: CMSStackSkillLevelEnum.INTERMEDIATE,
+  },
+  "OpenAI API": {
+    description: "OpenAI's API for AI and machine learning services",
+    iconUrl: "https://api.iconify.design/simple-icons:openai.svg?color=%23412199",
+    level: CMSStackSkillLevelEnum.INTERMEDIATE,
+  },
+  "Twilio": {
+    description: "Cloud communications platform for SMS, voice, and messaging",
+    iconUrl: "https://api.iconify.design/simple-icons:twilio.svg?color=%23F22F46",
+    level: CMSStackSkillLevelEnum.INTERMEDIATE,
+  },
+  "OCR APIs": {
+    description: "Optical Character Recognition APIs for text extraction",
+    iconUrl: "https://api.iconify.design/simple-icons:tesseract.svg?color=%23000000",
     level: CMSStackSkillLevelEnum.INTERMEDIATE,
   },
 };

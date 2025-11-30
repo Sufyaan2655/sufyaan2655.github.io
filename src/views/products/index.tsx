@@ -13,7 +13,7 @@ const ProductsView = async (props: Props) => {
   return (
     <>
       <HeaderSection {...pageData} />
-      <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
+      <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 p-8 max-w-[52rem] mx-auto">
         {productsRes.map((item) => (
           <ProductCard key={item.id} product={item} />
         ))}
