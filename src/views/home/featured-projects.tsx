@@ -22,7 +22,7 @@ const FeaturedProjects = async (props: Props) => {
           <LuArrowRight className="w-4 h-4" />
         </Link>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 p-8 max-w-[52rem] mx-auto">
         {featuredProducts.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}

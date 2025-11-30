@@ -9,6 +9,12 @@ type Props = {};
 
 const GithubActivity = (props: Props) => {
   const { theme } = useTheme();
+  const githubUsername = process.env.NEXT_PUBLIC_GITHUB_USERNAME="Sufyaan2655";
+  
+  if (!githubUsername) {
+    return null;
+  }
+
   return (
     <LabelSection
       label="Github Activity"
@@ -17,11 +23,10 @@ const GithubActivity = (props: Props) => {
     >
       <ScrollArea className="text-muted-foreground">
         <GitHubCalendar
-          username={process.env.NEXT_PUBLIC_GITHUB_USERNAME!}
+          username={githubUsername}
           colorScheme={theme === "light" ? "light" : "dark"}
           hideColorLegend
           blockSize={6.6}
-          // hideMonthLabels
         />
         <ScrollBar orientation="horizontal" />
       </ScrollArea>
