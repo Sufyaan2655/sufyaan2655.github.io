@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 const isGithubPages = process.env.GITHUB_PAGES === "true";
 // If your repo is named "username.github.io", set this to empty string ""
 // Otherwise, set it to your repo name (e.g., "/myPortfolio")
-const githubPagesBasePath = process.env.GITHUB_PAGES_BASE_PATH || "/myPortfolio";
+const githubPagesBasePath = process.env.GITHUB_PAGES_BASE_PATH || "";
 
 const nextConfig: NextConfig = {
   basePath: isGithubPages ? githubPagesBasePath : "",

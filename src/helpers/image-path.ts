@@ -11,28 +11,26 @@ export const getImagePath = (path: string): string => {
     return path;
   }
 
-  // Default basePath for GitHub Pages (can be overridden by env var or runtime detection)
-  let basePath = '/myPortfolio';
+  // Get basePath - default to empty for username.github.io repos
+  let basePath = '';
   
   // Try to get from env var first (embedded at build time)
   if (typeof process !== 'undefined' && process.env?.NEXT_PUBLIC_BASE_PATH) {
     basePath = process.env.NEXT_PUBLIC_BASE_PATH;
   }
   
-  // Runtime detection from URL (works in browser) - this is the most reliable
-  if (typeof window !== 'undefined') {
+  // Runtime detection from URL (works in browser) - only if basePath is not set
+  // For username.github.io repos, basePath should be empty, so we don't detect it
+  if (!basePath && typeof window !== 'undefined') {
     const pathname = window.location.pathname;
-    // Extract base path from URL (e.g., /myPortfolio from /myPortfolio/ or /myPortfolio/products)
-    const match = pathname.match(/^(\/[^\/]+)/);
-    if (match && match[1] !== '/') {
-      // Only use detected path if it's not just the root
-      // For GitHub Pages, the base path should be /myPortfolio
-      if (pathname.startsWith('/myPortfolio')) {
-        basePath = '/myPortfolio';
-      } else if (match[1] && match[1] !== '/') {
-        // Fallback: use first path segment as base path
-        basePath = match[1];
-      }
+    // Only detect basePath if URL has a path segment that's not just root
+    // For username.github.io, we want empty basePath, so we skip detection
+    // This is mainly for custom repo names like /myPortfolio
+    const match = pathname.match(/^\/([^\/]+)/);
+    if (match && match[1] && match[1] !== '') {
+      // Only set basePath if it's a clear subdirectory (not root domain)
+      // For now, we'll keep it empty for username.github.io repos
+      basePath = '';
     }
   }
 

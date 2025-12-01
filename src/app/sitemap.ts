@@ -8,7 +8,7 @@ export const dynamic = "force-static";
 const sitemap = async (): Promise<MetadataRoute.Sitemap> => {
   const pagesRes = await fetchPages();
   const baseUrl = envConfig.BASE_URL || (process.env.GITHUB_PAGES === "true" 
-    ? `https://sufyaan2655.github.io${process.env.GITHUB_PAGES_BASE_PATH || "/myPortfolio"}`
+    ? `https://sufyaan2655.github.io${process.env.GITHUB_PAGES_BASE_PATH || ""}`
     : "http://localhost:3000");
   
   const pagesSitemap: MetadataRoute.Sitemap = pagesRes.map((page) => ({

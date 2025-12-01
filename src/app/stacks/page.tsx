@@ -9,6 +9,9 @@ import StacksView from "@/views/stacks";
 import { notFound } from "next/navigation";
 import Script from "next/script";
 
+// Required for static export
+export const dynamic = "force-static";
+
 type Props = {};
 
 const StacksPage = async (props: Props) => {
