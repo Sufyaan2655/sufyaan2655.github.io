@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import Footer from "./footer";
 import Navigation from "./navigation";
-import PageTransition from "@/components/page-transition";
+import SmoothScroll from "@/components/smooth-scroll";
 
 type Props = {
   children: ReactNode;
@@ -13,7 +13,7 @@ const AppLayout = (props: Props) => {
     <>
       <Navigation />
       <main className="py-16">
-        <PageTransition>{children}</PageTransition>
+        <SmoothScroll>{children}</SmoothScroll>
       </main>
       <Footer />
     </>
