@@ -410,7 +410,7 @@ export const mockProducts: TCMSProduct[] = [
       height: 224,
     },
     pricingType: CMSProductPricingTypeEnum.OPEN_SOURCE,
-    liveLink: "",
+    liveLink: "https://vitals-tracker-five.vercel.app/",
     sourceLink: "https://github.com/Sufyaan2655/vitals-tracker",
     createdAt: new Date().toISOString(),
   },
@@ -751,7 +751,7 @@ export const projectTechStacks: Record<string, string[]> = {
   "2": ["React.js", "Next.js", "Firebase", "MySQL", "Prisma", "Node.js"], // Blogify
   "3": ["React.js", "Next.js", "Firebase", "Node.js", "Vercel"], // Inventory Management System
   "4": ["Python", "OpenAI API", "Twilio", "MySQL"], // Parking Ticket Bot
-  "5": ["Python", "FastAPI", "OpenCV", "JavaScript", "SQLite"], // VitalLens
+  "5": ["Python", "FastAPI", "OpenCV", "JavaScript", "PostgreSQL"], // VitalLens
 };
 
 // Tech stack metadata mapping
