@@ -400,6 +400,21 @@ export const mockWorks: TCMSWork[] = [
 // Mock Products Data
 export const mockProducts: TCMSProduct[] = [
   {
+    id: "5",
+    title: "VitalLens",
+    description: "A personal heart-rate and breathing-rate tracker that reads vital signs from a short webcam clip using remote photoplethysmography (rPPG) - no wearable required. Includes a live tracking overlay and signal/FFT charts in dev mode.",
+    logo: {
+      url: "/images/vitallens-logo.svg",
+      alt: "VitalLens",
+      width: 400,
+      height: 224,
+    },
+    pricingType: CMSProductPricingTypeEnum.OPEN_SOURCE,
+    liveLink: "",
+    sourceLink: "https://github.com/Sufyaan2655/vitals-tracker",
+    createdAt: new Date().toISOString(),
+  },
+  {
     id: "1",
     title: "Smart Transit System",
     description: "A data-driven transit management app that simulates bus and subway networks, analyzes congestion patterns, and visualizes optimized routes using algorithmic models.",
@@ -736,6 +751,7 @@ export const projectTechStacks: Record<string, string[]> = {
   "2": ["React.js", "Next.js", "Firebase", "MySQL", "Prisma", "Node.js"], // Blogify
   "3": ["React.js", "Next.js", "Firebase", "Node.js", "Vercel"], // Inventory Management System
   "4": ["Python", "OpenAI API", "Twilio", "MySQL"], // Parking Ticket Bot
+  "5": ["Python", "FastAPI", "OpenCV", "JavaScript", "SQLite"], // VitalLens
 };
 
 // Tech stack metadata mapping

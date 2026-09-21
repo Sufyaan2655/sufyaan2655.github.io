@@ -1,0 +1,24 @@
+<svg viewBox="0 0 400 224" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="VitalLens heartbeat trace">
+  <rect width="400" height="224" fill="#fdf2f2" />
+
+  <!-- faint strip-chart grid, echoing the app's clinical-chart palette -->
+  <g stroke="#f6e0e0" stroke-width="1">
+    <line x1="0" y1="56" x2="400" y2="56" />
+    <line x1="0" y1="112" x2="400" y2="112" />
+    <line x1="0" y1="168" x2="400" y2="168" />
+    <line x1="80" y1="0" x2="80" y2="224" />
+    <line x1="160" y1="0" x2="160" y2="224" />
+    <line x1="240" y1="0" x2="240" y2="224" />
+    <line x1="320" y1="0" x2="320" y2="224" />
+  </g>
+
+  <!-- static pulse trace; the live site's version of this only sweeps on hover -->
+  <polyline
+    points="0,112 60,112 90,112 120,32 150,192 180,68 210,112 260,112 300,112 330,32 360,192 390,68 400,112"
+    fill="none"
+    stroke="#c73529"
+    stroke-width="5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>

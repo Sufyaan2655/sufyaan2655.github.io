@@ -7,6 +7,7 @@ import {
 import { CMSProductPricingTypeEnum, TCMSProduct } from "@/types/cms/product";
 import { projectTechStacks } from "@/data/mock-cms-data";
 import { getImagePath } from "@/helpers/image-path";
+import VitalLensLogo from "@/components/logos/vitallens-logo";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
@@ -40,15 +41,19 @@ const ProductCard = (props: Props) => {
       className="group flex flex-col border rounded-lg hover:shadow-md hover:border-primary/20 hover:scale-105 transition-all duration-200 bg-card cursor-pointer overflow-hidden"
     >
       <div className="w-full h-56 overflow-hidden transition-transform duration-200 group-hover:scale-105 flex items-center justify-center">
-        <Image
-          src={getImagePath(product.logo.url)}
-          alt={product.logo?.alt || product.title}
-          width={400}
-          height={224}
-          className="object-cover w-full h-full"
-          unoptimized
-          priority={product.id === "1"}
-        />
+        {product.id === "5" ? (
+          <VitalLensLogo />
+        ) : (
+          <Image
+            src={getImagePath(product.logo.url)}
+            alt={product.logo?.alt || product.title}
+            width={400}
+            height={224}
+            className="object-cover w-full h-full"
+            unoptimized
+            priority={product.id === "1"}
+          />
+        )}
       </div>
       <div className="p-4 flex flex-col gap-3">
         <div className="flex items-start justify-between gap-2">
