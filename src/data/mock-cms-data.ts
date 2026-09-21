@@ -415,6 +415,22 @@ export const mockProducts: TCMSProduct[] = [
     createdAt: new Date().toISOString(),
   },
   {
+    id: "6",
+    title: "WashWise",
+    description: "A full-stack laundry reservation platform for apartment buildings: residents check real-time washer/dryer availability, book and pay in one flow, and join a waitlist, while property managers get a live revenue and machine-status dashboard.",
+    logo: {
+      url: "/images/washwise-logo.svg",
+      alt: "WashWise",
+      width: 400,
+      height: 224,
+    },
+    pricingType: CMSProductPricingTypeEnum.OPEN_SOURCE,
+    liveLink: "",
+    sourceLink: "https://github.com/Sufyaan2655/WashWise",
+    videoLink: "https://youtu.be/Jska1Kn_f1k",
+    createdAt: new Date().toISOString(),
+  },
+  {
     id: "1",
     title: "Smart Transit System",
     description: "A data-driven transit management app that simulates bus and subway networks, analyzes congestion patterns, and visualizes optimized routes using algorithmic models.",
@@ -752,6 +768,7 @@ export const projectTechStacks: Record<string, string[]> = {
   "3": ["React.js", "Next.js", "Firebase", "Node.js", "Vercel"], // Inventory Management System
   "4": ["Python", "OpenAI API", "Twilio", "MySQL"], // Parking Ticket Bot
   "5": ["Python", "FastAPI", "OpenCV", "JavaScript", "PostgreSQL"], // VitalLens
+  "6": ["SvelteKit", "Flask", "MySQL", "Docker"], // WashWise
 };
 
 // Tech stack metadata mapping
@@ -799,6 +816,16 @@ const techStackMetadata: Record<string, { description: string; iconUrl: string; 
   "Vue.js": {
     description: "The Progressive JavaScript Framework",
     iconUrl: "https://api.iconify.design/simple-icons:vuedotjs.svg?color=%234FC08D",
+    level: CMSStackSkillLevelEnum.INTERMEDIATE,
+  },
+  "SvelteKit": {
+    description: "The fast, flexible, full-stack Svelte framework",
+    iconUrl: "https://api.iconify.design/simple-icons:svelte.svg?color=%23FF3E00",
+    level: CMSStackSkillLevelEnum.INTERMEDIATE,
+  },
+  "Flask": {
+    description: "A lightweight WSGI web application framework for Python",
+    iconUrl: "https://api.iconify.design/simple-icons:flask.svg?color=%23000000",
     level: CMSStackSkillLevelEnum.INTERMEDIATE,
   },
   "Python": {

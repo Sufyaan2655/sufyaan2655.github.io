@@ -1,0 +1,32 @@
+<svg viewBox="0 0 400 224" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="WashWise washer porthole">
+  <rect width="400" height="224" fill="#0F172A" />
+
+  <!-- washer porthole: door ring, drum, and a settling swirl of water -->
+  <circle cx="140" cy="112" r="78" fill="none" stroke="#1E293B" stroke-width="14" />
+  <circle cx="140" cy="112" r="78" fill="none" stroke="#06B6D4" stroke-width="4" />
+  <circle cx="140" cy="112" r="58" fill="#0B1220" />
+  <path
+    d="M90,112 a50,50 0 0,0 100,0"
+    fill="none"
+    stroke="#06B6D4"
+    stroke-width="5"
+    stroke-linecap="round"
+    opacity="0.55"
+  />
+  <path
+    d="M100,128 a40,40 0 0,0 80,0"
+    fill="none"
+    stroke="#06B6D4"
+    stroke-width="4"
+    stroke-linecap="round"
+    opacity="0.3"
+  />
+
+  <!-- rising bubbles -->
+  <circle cx="240" cy="150" r="6" fill="#06B6D4" opacity="0.7" />
+  <circle cx="262" cy="120" r="4" fill="#06B6D4" opacity="0.5" />
+  <circle cx="285" cy="160" r="9" fill="#06B6D4" opacity="0.6" />
+  <circle cx="310" cy="110" r="5" fill="#06B6D4" opacity="0.4" />
+  <circle cx="255" cy="80" r="3.5" fill="#06B6D4" opacity="0.5" />
+  <circle cx="330" cy="140" r="6" fill="#06B6D4" opacity="0.35" />
+</svg>
