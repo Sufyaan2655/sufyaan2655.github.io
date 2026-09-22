@@ -8,6 +8,7 @@ import { CMSProductPricingTypeEnum, TCMSProduct } from "@/types/cms/product";
 import { projectTechStacks } from "@/data/mock-cms-data";
 import { getImagePath } from "@/helpers/image-path";
 import VitalLensLogo from "@/components/logos/vitallens-logo";
+import WashWiseLogo from "@/components/logos/washwise-logo";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
@@ -43,6 +44,8 @@ const ProductCard = (props: Props) => {
       <div className="w-full h-56 overflow-hidden transition-transform duration-200 group-hover:scale-105 flex items-center justify-center">
         {product.id === "5" ? (
           <VitalLensLogo />
+        ) : product.id === "6" ? (
+          <WashWiseLogo />
         ) : (
           <Image
             src={getImagePath(product.logo.url)}

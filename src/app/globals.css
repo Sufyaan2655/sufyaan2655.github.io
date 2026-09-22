@@ -158,3 +158,12 @@
     stroke-dashoffset: -200;
   }
 }
+
+@keyframes washwise-sheen {
+  from {
+    transform: translateX(-380px);
+  }
+  to {
+    transform: translateX(900px);
+  }
+}
