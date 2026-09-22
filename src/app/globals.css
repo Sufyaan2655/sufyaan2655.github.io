@@ -159,11 +159,24 @@
   }
 }
 
-@keyframes washwise-sheen {
-  from {
-    transform: translateX(-380px);
+@keyframes washwise-w-enter {
+  0% {
+    opacity: 0;
+    transform: scale(0.2) translateY(18px);
   }
-  to {
-    transform: translateX(900px);
+  35% {
+    opacity: 1;
+    transform: scale(1.15) translateY(-5px);
+  }
+  55% {
+    transform: scale(0.92) translateY(2px);
+  }
+  75% {
+    transform: scale(1.04) translateY(-1px);
+  }
+  90%,
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
   }
 }

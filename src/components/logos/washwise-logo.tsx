@@ -17,14 +17,6 @@ const WashWiseLogo = () => (
         <stop offset="0" stopColor="#000000" stopOpacity={0} />
         <stop offset="1" stopColor="#000000" stopOpacity={0.22} />
       </radialGradient>
-      <linearGradient id="washwise-sheen-gradient" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0" stopColor="#ffffff" stopOpacity={0} />
-        <stop offset="0.5" stopColor="#ffffff" stopOpacity={0.3} />
-        <stop offset="1" stopColor="#ffffff" stopOpacity={0} />
-      </linearGradient>
-      <clipPath id="washwise-clip">
-        <rect width="640" height="640" />
-      </clipPath>
     </defs>
 
     <rect width="640" height="640" fill="#173f36" />
@@ -32,19 +24,29 @@ const WashWiseLogo = () => (
     <rect width="640" height="640" fill="url(#washwise-weave-b)" opacity={0.5} />
     <rect width="640" height="640" fill="url(#washwise-vignette)" />
 
-    <circle cx="132" cy="311" r="42" fill="#2a7d68" />
-    <text
-      x="132"
-      y="311"
-      textAnchor="middle"
-      dominantBaseline="central"
-      fontFamily="'Space Grotesk', Arial, sans-serif"
-      fontSize="43"
-      fontWeight={700}
-      fill="#f4f3ed"
+    {/* the W badge - the one moving piece: it pops in with a small spring
+        overshoot, holds, then resets and repeats while the card is
+        hovered. Transform-origin is pinned to the badge's own center so
+        the scale reads as the badge growing in place, not the whole
+        logo shifting. */}
+    <g
+      className="[animation-play-state:paused] group-hover:[animation-play-state:running] animate-[washwise-w-enter_2.2s_ease-out_infinite]"
+      style={{ transformOrigin: "132px 311px" }}
     >
-      W
-    </text>
+      <circle cx="132" cy="311" r="42" fill="#2a7d68" />
+      <text
+        x="132"
+        y="311"
+        textAnchor="middle"
+        dominantBaseline="central"
+        fontFamily="'Space Grotesk', Arial, sans-serif"
+        fontSize="43"
+        fontWeight={700}
+        fill="#f4f3ed"
+      >
+        W
+      </text>
+    </g>
 
     <text
       x="179"
